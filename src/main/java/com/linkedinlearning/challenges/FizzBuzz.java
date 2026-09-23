@@ -13,22 +13,25 @@ public class FizzBuzz {
   }
 
   public String renderFizzBuzzUntil() {
-
     ArrayList<String> result = new ArrayList<>();
 
     for (int count = this.start; count <= this.end; count++) {
-      if (this.isFizzBuzz(count)) {
-        result.add("FizzBuzz");
-      } else if (this.isFizz(count)) {
-        result.add("Fizz");
-      } else if (this.isBuzz(count)) {
-        result.add("Buzz");
-      } else {
-        result.add(String.valueOf(count));
-      }
+      result.add(this.applyFizzBuzzItem(count));
     }
 
     return String.join(System.lineSeparator(), result);
+  }
+
+  private String applyFizzBuzzItem(int count) {
+    if (this.isFizzBuzz(count)) {
+      return "FizzBuzz";
+    } else if (this.isFizz(count)) {
+      return "Fizz";
+    } else if (this.isBuzz(count)) {
+      return "Buzz";
+    } else {
+      return String.valueOf(count);
+    }
   }
 
   private Boolean isFizz(int currentValue) {
