@@ -5,9 +5,6 @@ import java.util.List;
 
 public class PrimeNumberFinder {
 
-  public PrimeNumberFinder() {
-  }
-
   public List<Integer> findInInterval(int start, int end) {
     List<Integer> result = new ArrayList<>();
 
