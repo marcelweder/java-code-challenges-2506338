@@ -45,11 +45,9 @@ public class Diamond {
   }
 
   private List<String> createRows() {
-
     List<String> rows = new ArrayList<String>();
 
     int numberOfLetters = this.letter - this.START_LETTER;
-
     for (int index = 0; index <= numberOfLetters; index++) {
       rows.add(this.createRow(index));
     }
